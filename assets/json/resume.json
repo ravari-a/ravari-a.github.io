@@ -1,221 +1,185 @@
 {
   "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
+    "name": "Amirhossein Ravari",
+    "label": "PhD Candidate · Reinforcement Learning, Inverse RL, LLMs",
     "image": "",
-    "email": "einstein@example.com",
-    "phone": "(912) 123-4567",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "email": "ravari.a@northeastern.edu",
+    "phone": "",
+    "url": "https://ravari-a.github.io",
+    "summary": "Machine learning researcher specializing in reinforcement learning and human–AI collaboration, with 5+ years designing and deploying deep learning solutions. Skilled in inverse and multi-agent RL, large language models, and applied ML across healthcare, cybersecurity, and disaster response.",
     "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
+      "address": "",
+      "postalCode": "",
+      "city": "Boston",
       "countryCode": "US",
-      "region": "California"
+      "region": "Massachusetts"
     },
-    "profiles": []
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "amirhossein-ravari",
+        "url": "https://linkedin.com/in/amirhossein-ravari"
+      },
+      {
+        "network": "GitHub",
+        "username": "ravari-a",
+        "url": "https://github.com/ravari-a"
+      }
+    ]
   },
   "work": [
     {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "location": "Princeton University, NJ",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
-      "highlights": ["Relativity", "Description 2."]
+      "name": "Northeastern University",
+      "position": "Doctoral Researcher",
+      "url": "https://imani.lab.northeastern.edu/",
+      "startDate": "2022-09-01",
+      "endDate": "",
+      "summary": "Imani Lab, Department of Electrical and Computer Engineering.",
+      "highlights": [
+        "Developed inverse reinforcement learning (IRL) and multi-agent RL frameworks for modeling human–AI collaboration in complex decision-making, leading to publications in IEEE TAI, ACC, L4DC, and Asilomar.",
+        "Designed adversarial inverse learning methods conditioned on human psychological factor models to improve cyber defense policy optimization.",
+        "Formulated optimal inference algorithms for hidden Markov models from expert-acquired data, published in IEEE Transactions on Artificial Intelligence.",
+        "Built hybrid probabilistic models for heterogeneous human teams operating under uncertainty and partial observability."
+      ]
     },
     {
-      "name": "California Institute of Technology",
-      "position": "Visiting Professor",
-      "location": "Pasadena, California, US",
-      "startDate": "1933-01-01",
-      "endDate": "1933-01-01",
-      "summary": "",
-      "highlights": ["Description 1.", "Description 2."]
+      "name": "Northeastern University",
+      "position": "Graduate Teaching Assistant — Reinforcement Learning",
+      "url": "",
+      "startDate": "2026-01-01",
+      "endDate": "",
+      "summary": "Reinforcement Learning and Decision Making under Uncertainty (graduate course).",
+      "highlights": [
+        "Teaching and mentoring graduate students; supporting course design, grading, exam preparation, and weekly office hours."
+      ]
     },
     {
-      "name": "Kaiser Wilhelm Institute for Physics",
-      "position": "Director",
-      "location": "Berlin, Germany",
-      "startDate": "1917-01-01",
-      "endDate": "1933-01-01",
-      "summary": "",
-      "highlights": []
+      "name": "Walkky",
+      "position": "Data Scientist (Internship)",
+      "url": "",
+      "startDate": "2025-05-01",
+      "endDate": "2025-11-01",
+      "summary": "Multimodal language models for medical time-series and imaging data.",
+      "highlights": [
+        "Researched multimodal language models integrating ECG signals, echocardiograms, and clinical reports for unified diagnostic representations.",
+        "Contributed to generative self-supervised models for medical time-series using structured tokenization and masked prediction objectives.",
+        "Implemented Vision Transformer (ViT) models for ECG image classification, achieving 82% accuracy with bagging and majority-voting ensembles."
+      ]
     },
     {
-      "name": "Karl-Ferdinand University",
-      "position": "Professor of Theoretical Physics",
-      "location": "Prague, Czechoslovakia",
-      "startDate": "1911-01-01",
-      "endDate": "1917-01-01",
-      "summary": "",
-      "highlights": []
+      "name": "Sharif University of Technology",
+      "position": "Graduate Research Assistant",
+      "url": "",
+      "startDate": "2018-09-01",
+      "endDate": "2021-02-01",
+      "summary": "Multi-agent RL, deep generative models, and EEG classification.",
+      "highlights": [
+        "Developed multi-agent RL frameworks in partially observable environments using MDPs and Nash equilibria for emergent self-assembly tasks.",
+        "Implemented CNN–RNN architectures and GANs in PyTorch for synthetic data generation and automated image captioning.",
+        "Designed LSTM-based sequence-to-sequence models for culturally adaptive text generation.",
+        "Built EEG-based classifiers using statistical machine learning to detect emotion states from visual stimuli.",
+        "Developed parallel C++/CUDA GPU-accelerated algorithms for nearest-neighbor histogram computations."
+      ]
     },
     {
-      "name": "University of Zurich",
-      "position": "Associate Professor of Theoretical Physics",
-      "location": "Zurich, Switzerland",
-      "startDate": "1909-01-01",
-      "endDate": "1911-01-01",
-      "summary": "",
-      "highlights": []
-    }
-  ],
-  "volunteer": [
-    {
-      "organization": "People's Climate March",
-      "location": "Zurich, Switzerland",
-      "position": "Lead Organizer",
-      "startDate": "2014-04-01",
-      "endDate": "2015-07-01",
-      "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
-      "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
+      "name": "Sharif University of Technology",
+      "position": "Graduate / Undergraduate Teaching Assistant",
+      "url": "",
+      "startDate": "2017-09-01",
+      "endDate": "2020-05-01",
+      "summary": "Object-Oriented Programming, Analog Circuits Lab, Principles of Electronics.",
+      "highlights": [
+        "Head Teaching Assistant for Object-Oriented Programming, mentoring 150+ students and coordinating labs and projects."
+      ]
     }
   ],
   "education": [
     {
-      "institution": "University of Zurich",
-      "location": "Zurich, Switzerland",
-      "url": "https://www.uzh.ch/",
-      "area": "Physics",
+      "institution": "Northeastern University",
+      "url": "https://www.northeastern.edu/",
+      "area": "Electrical and Computer Engineering",
       "studyType": "PhD",
-      "startDate": "1900-01-01",
-      "endDate": "1905-01-01",
+      "startDate": "2022-09-01",
+      "endDate": "",
       "score": "",
-      "courses": ["Theory of Relativity"],
-      "highlights": ["Description 1.", "Description 2."]
+      "courses": []
     },
     {
-      "institution": "Eidgenössische Technische Hochschule",
-      "location": "Zurich, Switzerland",
-      "area": "Physics",
-      "studyType": "Federal teaching diploma",
-      "startDate": "1896-01-01",
-      "endDate": "1900-01-01",
+      "institution": "Sharif University of Technology",
+      "url": "https://en.sharif.edu/",
+      "area": "Electrical Engineering",
+      "studyType": "MSc",
+      "startDate": "2018-09-01",
+      "endDate": "2021-02-01",
       "score": "",
-      "courses": [],
-      "highlights": ["Description 1.", "Description 2."]
+      "courses": []
+    },
+    {
+      "institution": "Sharif University of Technology",
+      "url": "https://en.sharif.edu/",
+      "area": "Electrical Engineering",
+      "studyType": "BSc",
+      "startDate": "2014-09-01",
+      "endDate": "2018-02-01",
+      "score": "",
+      "courses": []
     }
   ],
   "awards": [
     {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
+      "title": "ECE Scholars Fellowship",
+      "date": "2022-09-01",
+      "awarder": "Northeastern University",
+      "summary": "Selective doctoral fellowship awarded by the Department of Electrical and Computer Engineering."
     },
     {
-      "title": "Max Planck Medal",
-      "date": "2029-01-01",
-      "awarder": "German Physical Society",
-      "summary": ""
+      "title": "Experiential PhD Leadership Certificate",
+      "date": "2026-02-01",
+      "awarder": "Northeastern University",
+      "summary": "Leadership development program for doctoral students."
     }
   ],
-  "certificates": [
-    {
-      "name": "Machine Learning",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "icon": "fa-solid fa-location-dot"
-    },
-    {
-      "name": "Quantum Computing",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "icon": "fa-solid fa-tag"
-    },
-    {
-      "name": "Quantum Information",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "icon": "fa-solid fa-envelope"
-    }
-  ],
-  "publications": [
-    {
-      "name": "Zur Elektrodynamik bewegter Körper",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-06-30",
-      "url": "https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies",
-      "summary": "It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source."
-    },
-    {
-      "name": "Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-03-18",
-      "url": "https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt",
-      "summary": "In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921."
-    },
-    {
-      "name": "Die Grundlage der allgemeinen Relativitätstheorie",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1916-03-20",
-      "url": "https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie",
-      "summary": "The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914)."
-    }
-  ],
+  "certificates": [],
+  "publications": [],
   "skills": [
     {
-      "name": "Physics",
-      "level": "Master",
-      "icon": "fa-solid fa-hashtag",
+      "name": "Research Areas",
+      "level": "",
+      "icon": "",
       "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
+        "Reinforcement Learning",
+        "Inverse Reinforcement Learning",
+        "Multi-Agent RL",
+        "Large Language Models",
+        "Deep Learning",
+        "Human–AI Collaboration"
+      ]
+    },
+    {
+      "name": "Frameworks & Tools",
+      "level": "",
+      "icon": "",
+      "keywords": [
+        "PyTorch",
+        "TensorFlow",
+        "CUDA",
+        "Git"
+      ]
+    },
+    {
+      "name": "Programming Languages",
+      "level": "",
+      "icon": "",
+      "keywords": [
+        "Python",
+        "MATLAB",
+        "C++"
       ]
     }
   ],
-  "languages": [
-    {
-      "language": "German",
-      "fluency": "Native speaker",
-      "icon": ""
-    },
-    {
-      "language": "English",
-      "fluency": "Fluent",
-      "icon": ""
-    }
-  ],
-  "interests": [
-    {
-      "name": "Physics",
-      "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
-      ]
-    }
-  ],
-  "references": [
-    {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-laptop",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit."
-    },
-    {
-      "name": "Professor Jane Smith",
-      "icon": "fa-solid fa-thumbtack",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit."
-    }
-  ],
-  "projects": [
-    {
-      "name": "Quantum Computing",
-      "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
-      "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
-      "startDate": "2018-01-01",
-      "endDate": "2018-01-01"
-    }
-  ]
+  "languages": [],
+  "interests": [],
+  "references": [],
+  "projects": [],
+  "volunteer": []
 }
