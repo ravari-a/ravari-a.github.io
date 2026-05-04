@@ -8,8 +8,6 @@
     "url": "https://ravari-a.github.io",
     "summary": "Machine learning researcher specializing in reinforcement learning and human–AI collaboration, with 5+ years designing and deploying deep learning solutions. Skilled in inverse and multi-agent RL, large language models, and applied ML across healthcare, cybersecurity, and disaster response.",
     "location": {
-      "address": "",
-      "postalCode": "",
       "city": "Boston",
       "countryCode": "US",
       "region": "Massachusetts"
@@ -47,7 +45,7 @@
       "position": "Graduate Teaching Assistant — Reinforcement Learning",
       "url": "",
       "startDate": "2026-01-01",
-      "endDate": "",
+      "endDate": "2026-04-30",
       "summary": "Reinforcement Learning and Decision Making under Uncertainty (graduate course).",
       "highlights": [
         "Teaching and mentoring graduate students; supporting course design, grading, exam preparation, and weekly office hours."
