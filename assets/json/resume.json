@@ -142,8 +142,6 @@
   "skills": [
     {
       "name": "Research Areas",
-      "level": "",
-      "icon": "",
       "keywords": [
         "Reinforcement Learning",
         "Inverse Reinforcement Learning",
@@ -155,8 +153,6 @@
     },
     {
       "name": "Frameworks & Tools",
-      "level": "",
-      "icon": "",
       "keywords": [
         "PyTorch",
         "TensorFlow",
@@ -166,8 +162,6 @@
     },
     {
       "name": "Programming Languages",
-      "level": "",
-      "icon": "",
       "keywords": [
         "Python",
         "MATLAB",
