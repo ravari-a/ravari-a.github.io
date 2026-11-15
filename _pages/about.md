@@ -12,6 +12,16 @@ profile:
     <p>Boston, MA</p>
     <p>ravari.a [at] northeastern [dot] edu</p>
 
+research_areas:
+  - name: systems biology
+    blurb: Inferring gene regulatory networks and other biological models by treating experts' decisions as evidence.
+  - name: cybersecurity
+    blurb: Modeling human cyber defenders and building multi-agent defenses that adapt to the attacker.
+  - name: disaster response
+    blurb: Helping AI teammates understand how humans perceive and act in rescue missions, without explicit communication.
+  - name: biomedical AI
+    blurb: Self-supervised language models for electrocardiograms.
+
 selected_papers: true
 social: true
 
