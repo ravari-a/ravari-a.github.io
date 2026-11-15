@@ -454,6 +454,56 @@ ninja.data = [{
           description: "another project with an image 🎉",
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
+            },},{id: "projects-expert-enabled-inference-of-hidden-markov-models",
+          title: 'Expert-Enabled Inference of Hidden Markov Models',
+          description: "Inferring hidden Markov models from the decisions experts make, not only from how the system behaves.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/expert-enabled-hmm-inference/";
+            },},{id: "projects-expert-enabled-inference-of-gene-regulatory-networks",
+          title: 'Expert-Enabled Inference of Gene Regulatory Networks',
+          description: "Using biologists&#39; interventions as evidence when inferring gene regulatory networks from limited data.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/expert-enabled-regulatory-networks/";
+            },},{id: "projects-hybrid-models-of-heterogeneous-human-teams",
+          title: 'Hybrid Models of Heterogeneous Human Teams',
+          description: "Modeling teams whose members differ in awareness and communication, from centralized to decentralized.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/heterogeneous-human-teams/";
+            },},{id: "projects-human-factor-aware-inverse-learning-for-cyber-defense",
+          title: 'Human-Factor-Aware Inverse Learning for Cyber Defense',
+          description: "Learning operator-specific defense policies conditioned on fatigue, expertise and risk tolerance.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/human-factor-cyber-defense/";
+            },},{id: "projects-implicit-human-perception-learning-for-rescue-operations",
+          title: 'Implicit Human Perception Learning for Rescue Operations',
+          description: "An agent that learns how its human teammate perceives an unknown environment, without communication.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/implicit-perception-learning/";
+            },},{id: "projects-latent-task-inference-in-human-ai-teams",
+          title: 'Latent Task Inference in Human–AI Teams',
+          description: "Identifying which task model explains a human teammate&#39;s behavior, from observed trajectories alone.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/latent-task-inference/";
+            },},{id: "projects-personalized-models-of-cyber-defenders",
+          title: 'Personalized Models of Cyber Defenders',
+          description: "Inferring individual defenders&#39; cognitive traits from limited behavioral data, validated with 108 participants.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/personalized-cyber-defense/";
+            },},{id: "projects-posterior-conditioned-multi-agent-cyber-defense",
+          title: 'Posterior-Conditioned Multi-Agent Cyber Defense',
+          description: "Decentralized defenders that adapt online to a shared belief about the active attack regime.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/posterior-conditioned-marl/";
+            },},{id: "projects-rhythmbert-reading-ecgs-as-a-language",
+          title: 'RhythmBERT: Reading ECGs as a Language',
+          description: "A self-supervised ECG language model that turns each heartbeat into tokens for its P, QRS and T waves.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/rhythmbert/";
+            },},{id: "projects-quantifying-biologists-39-knowledge-with-structure-based-irl",
+          title: 'Quantifying Biologists&amp;#39; Knowledge with Structure-Based IRL',
+          description: "Learning biologists&#39; decision policies with reward functions shaped by the structure of the gene network.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/structure-based-irl-biology/";
             },},{id: "teachings-data-science-fundamentals",
           title: 'Data Science Fundamentals',
           description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
