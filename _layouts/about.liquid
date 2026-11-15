@@ -40,6 +40,11 @@ layout: default
 
     <div class="clearfix">{{ content }}</div>
 
+    <!-- Research explorer -->
+    {% if page.research_areas %}
+      {% include research_explorer.liquid %}
+    {% endif %}
+
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
       <h2>
