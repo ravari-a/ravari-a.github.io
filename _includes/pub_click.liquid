@@ -1,0 +1,29 @@
+<style>
+.publications ol.bibliography li.pub-link{cursor:pointer;border-radius:3px;transition:background-color .15s ease,box-shadow .15s ease}
+.publications ol.bibliography li.pub-link:hover{background-color:var(--global-code-bg-color);box-shadow:0 0 0 .6rem var(--global-code-bg-color)}
+.publications .title a.title-link{color:inherit;text-decoration:none}
+.publications li.pub-link:hover .title a.title-link,.publications .title a.title-link:hover,.publications .title a.title-link:focus-visible{color:var(--global-theme-color)}
+@media (prefers-reduced-motion:reduce){.publications ol.bibliography li.pub-link{transition:none}}
+</style>
+<script>
+(function () {
+  function init() {
+    var rows = document.querySelectorAll(".publications ol.bibliography > li");
+    Array.prototype.forEach.call(rows, function (li) {
+      if (li.getAttribute("data-pub-link")) return;
+      var a = li.querySelector(".title a.title-link");
+      if (!a) return;
+      li.setAttribute("data-pub-link", "1");
+      li.classList.add("pub-link");
+      li.addEventListener("click", function (e) {
+        if (e.defaultPrevented || e.button !== 0) return;
+        if (e.target.closest("a, button, input, textarea, select, label, summary, figure, abbr, .links, .badges, .bibtex, .abstract, .award")) return;
+        if (window.getSelection && String(window.getSelection())) return;
+        if (e.metaKey || e.ctrlKey || e.shiftKey) { window.open(a.href, "_blank", "noopener"); return; }
+        window.location.href = a.href;
+      });
+    });
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init); else init();
+})();
+</script>

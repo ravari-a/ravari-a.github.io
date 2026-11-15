@@ -1,0 +1,121 @@
+{%- comment -%}
+  Research explorer for the home page: area tabs over project cards.
+  Data: page.research_areas (name, blurb) in _pages/about.md and site.projects (category, title, description, img).
+  Citation stats come from _data/citations.yml.
+{%- endcomment -%}
+{%- assign rx_total = 0 -%}
+{%- assign rx_counts = '' | split: ',' -%}
+{%- for p in site.data.citations.papers -%}
+{%- assign rx_c = p[1].citations | plus: 0 -%}
+{%- assign rx_total = rx_total | plus: rx_c -%}
+{%- assign rx_counts = rx_counts | push: rx_c -%}
+{%- endfor -%}
+{%- assign rx_counts = rx_counts | sort | reverse -%}
+{%- assign rx_h = 0 -%}
+{%- for c in rx_counts -%}{%- if c >= forloop.index -%}{%- assign rx_h = forloop.index -%}{%- endif -%}{%- endfor -%}
+<h2 id="research"><a href="{{ '/projects/' | relative_url }}" style="color: inherit">research</a></h2>
+<div class="rx" data-rx>
+{%- if rx_total > 0 %}
+<p class="rx-stats">{{ site.data.citations.papers.size }} peer-reviewed papers <span aria-hidden="true">·</span> {{ rx_total }} citations <span aria-hidden="true">·</span> h-index {{ rx_h }} <span aria-hidden="true">·</span> <a href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}">Google Scholar</a></p>
+{%- endif %}
+<div class="rx-tabs" role="tablist" aria-label="Research areas">
+{%- for area in page.research_areas -%}
+{%- assign rx_slug = area.name | slugify -%}
+{%- assign rx_items = site.projects | where: 'category', area.name -%}
+<button type="button" class="rx-tab" role="tab" id="rx-tab-{{ rx_slug }}" aria-controls="rx-panel-{{ rx_slug }}" aria-selected="false" tabindex="-1" data-area="{{ rx_slug }}">{{ area.name }}<span class="rx-count">{{ rx_items.size }}</span></button>
+{%- endfor -%}
+</div>
+{%- for area in page.research_areas -%}
+{%- assign rx_slug = area.name | slugify -%}
+{%- assign rx_items = site.projects | where: 'category', area.name | sort: 'importance' -%}
+<div class="rx-panel" role="tabpanel" id="rx-panel-{{ rx_slug }}" aria-labelledby="rx-tab-{{ rx_slug }}" hidden>
+<p class="rx-blurb">{{ area.blurb }}</p>
+<div class="rx-grid">
+{%- for project in rx_items -%}
+{%- assign rx_img = project.img | remove: '.png' | remove: '.jpg' | remove: '.jpeg' -%}
+<a class="rx-card" href="{{ project.url | relative_url }}">
+<span class="rx-thumb"><picture><source type="image/webp" srcset="{{ rx_img | relative_url }}-480.webp 480w, {{ rx_img | relative_url }}-800.webp 800w" sizes="(min-width: 768px) 290px, (min-width: 480px) 45vw, 92vw"><img src="{{ project.img | relative_url }}" alt="" loading="lazy" width="1200" height="750"></picture></span>
+<span class="rx-body"><span class="rx-title">{{ project.title }}</span><span class="rx-desc">{{ project.description }}</span><span class="rx-go">View project <span aria-hidden="true">→</span></span></span>
+</a>
+{%- endfor -%}
+</div>
+</div>
+{%- endfor -%}
+<p class="rx-all"><a href="{{ '/projects/' | relative_url }}">All projects <span aria-hidden="true">→</span></a></p>
+</div>
+<style>
+.rx{margin:0 0 2.5rem}
+.rx-stats{font-size:.85rem;color:var(--global-text-color-light);margin:-.35rem 0 .9rem;font-variant-numeric:tabular-nums}
+.rx-tabs{display:flex;flex-wrap:wrap;column-gap:1.5rem;border-bottom:1px solid var(--global-divider-color);margin-bottom:1.1rem}
+.rx-tab{appearance:none;-webkit-appearance:none;background:none;border:0;border-bottom:2px solid transparent;margin:0 0 -1px;padding:.55rem 0 .5rem;font:inherit;font-size:.95rem;color:var(--global-text-color-light);cursor:pointer;transition:color .15s ease,border-color .15s ease}
+@media (max-width:575.98px){.rx-tabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}.rx-tabs::-webkit-scrollbar{display:none}.rx-tab{white-space:nowrap;flex:0 0 auto}}
+.rx-tab:hover{color:var(--global-text-color)}
+.rx-tab[aria-selected="true"]{color:var(--global-theme-color);border-bottom-color:var(--global-theme-color)}
+.rx-tab:focus{outline:none}
+.rx-tab:focus-visible{outline:2px solid var(--global-theme-color);outline-offset:3px;border-radius:2px}
+.rx-count{display:inline-block;margin-left:.4em;font-size:.72em;opacity:.7;font-variant-numeric:tabular-nums}
+.rx-panel[hidden]{display:none}
+.rx-blurb{color:var(--global-text-color-light);margin:0 0 1rem;max-width:44rem}
+.rx-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+@media (max-width:767.98px){.rx-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:479.98px){.rx-grid{grid-template-columns:1fr}}
+.rx-card{display:flex;flex-direction:column;border:1px solid var(--global-divider-color);border-radius:8px;overflow:hidden;background:var(--global-card-bg-color);color:inherit!important;text-decoration:none!important;transition:transform .2s cubic-bezier(.2,.7,.2,1),border-color .2s ease,box-shadow .2s ease}
+.rx-card:hover,.rx-card:focus-visible{transform:translateY(-3px);border-color:var(--global-theme-color);box-shadow:0 8px 22px rgba(0,0,0,.08);outline:none}
+.rx-thumb{display:block;aspect-ratio:16/10;background:#fff;border-bottom:1px solid var(--global-divider-color)}
+.rx-thumb img{display:block;width:100%;height:100%;object-fit:contain}
+.rx-body{display:flex;flex-direction:column;gap:.35rem;flex:1;padding:.75rem .85rem .8rem}
+.rx-title{font-weight:600;font-size:.95rem;line-height:1.3;transition:color .2s ease}
+.rx-card:hover .rx-title,.rx-card:focus-visible .rx-title{color:var(--global-theme-color)}
+.rx-desc{font-size:.82rem;line-height:1.45;color:var(--global-text-color-light)}
+.rx-go{margin-top:auto;padding-top:.25rem;font-size:.78rem;color:var(--global-theme-color);opacity:0;transform:translateX(-4px);transition:opacity .2s ease,transform .2s ease}
+.rx-card:hover .rx-go,.rx-card:focus-visible .rx-go{opacity:1;transform:none}
+@media (hover:none){.rx-go{opacity:1;transform:none}}
+.rx-all{margin:1rem 0 0;font-size:.9rem}
+.rx-in .rx-blurb,.rx-in .rx-card{animation:rx-rise .34s cubic-bezier(.2,.7,.2,1) both}
+.rx-in .rx-card:nth-child(1){animation-delay:.03s}.rx-in .rx-card:nth-child(2){animation-delay:.07s}.rx-in .rx-card:nth-child(3){animation-delay:.11s}
+@keyframes rx-rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.rx-card,.rx-tab,.rx-go,.rx-title{transition:none}.rx-in .rx-blurb,.rx-in .rx-card{animation:none}.rx-card:hover,.rx-card:focus-visible{transform:none}}
+</style>
+<script>
+(function () {
+  var root = document.querySelector("[data-rx]");
+  if (!root) return;
+  var tabs = Array.prototype.slice.call(root.querySelectorAll('[role="tab"]'));
+  var panels = Array.prototype.slice.call(root.querySelectorAll('[role="tabpanel"]'));
+  if (!tabs.length) return;
+  function select(i, focus, animate) {
+    tabs.forEach(function (t, j) {
+      var on = i === j;
+      t.setAttribute("aria-selected", on ? "true" : "false");
+      t.tabIndex = on ? 0 : -1;
+      panels[j].hidden = !on;
+      panels[j].classList.remove("rx-in");
+      if (on && animate) { void panels[j].offsetWidth; panels[j].classList.add("rx-in"); }
+    });
+    if (focus) tabs[i].focus();
+    if (animate) {
+      var bar = tabs[i].parentNode;
+      if (bar.scrollWidth > bar.clientWidth) bar.scrollLeft = Math.max(0, tabs[i].offsetLeft - bar.offsetLeft - 16);
+    }
+  }
+  tabs.forEach(function (t, i) {
+    t.addEventListener("click", function () { select(i, false, true); });
+    t.addEventListener("keydown", function (e) {
+      var n = tabs.length, j = null;
+      if (e.key === "ArrowRight") j = (i + 1) % n;
+      else if (e.key === "ArrowLeft") j = (i - 1 + n) % n;
+      else if (e.key === "Home") j = 0;
+      else if (e.key === "End") j = n - 1;
+      if (j !== null) { e.preventDefault(); select(j, true, true); }
+    });
+  });
+  function fromHash(animate) {
+    var m = window.location.hash.match(/^#research-(.+)$/), k = -1;
+    if (m) tabs.forEach(function (t, i) { if (t.getAttribute("data-area") === m[1]) k = i; });
+    if (k >= 0) select(k, false, animate);
+    return k;
+  }
+  if (fromHash(false) < 0) select(0, false, false);
+  window.addEventListener("hashchange", function () { fromHash(true); });
+})();
+</script>
